@@ -2,6 +2,11 @@
 
 A host micro-frontend shell built with **Vite**, **React 18**, **TypeScript**, and **`@originjs/vite-plugin-federation`**.
 
+This project aims to provide a skeleton framework for a front end React application to act as a platform that can load smaller clients through module federation.
+
+Extend this how you'd like!
+
+
 ## Quick Start
 
 ```bash
@@ -35,6 +40,8 @@ shell-platform/
 ├── vite.config.ts             # Federation plugin config — register remotes here
 ├── tsconfig.json
 └── package.json
+└── eslint.config.mjs          # eslint configuration
+
 ```
 
 ## Adding a Remote App
@@ -57,3 +64,6 @@ The short version — three files to touch in this shell:
 | `npm run build` | Type-check + Vite production build |
 | `npm run preview` | Preview production build locally |
 | `npm run type-check` | TypeScript check without building |
+| `npm run test` | Runs tests, with coverage, within the project |
+| `npm run lint` | Uses eslint with some sensible rules to lint the code |
+| `npm run format` | Will attempt to fix formatting issues |

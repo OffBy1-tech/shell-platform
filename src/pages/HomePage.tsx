@@ -1,4 +1,4 @@
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "~/context/AuthContext";
 
 // Demo login — replace with your real auth flow
 const DEMO_USER = {

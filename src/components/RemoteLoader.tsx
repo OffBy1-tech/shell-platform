@@ -95,7 +95,6 @@ export function RemoteLoader({
   componentProps = {},
 }: RemoteLoaderProps) {
   // `lazy` caches the promise — calling loader() multiple times is safe.
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const Remote = React.useMemo(() => lazy(loader), [loader]);
 
   return (

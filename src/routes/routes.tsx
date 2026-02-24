@@ -1,7 +1,7 @@
 import { RouteObject } from "react-router-dom";
-import { RemoteLoader } from "../components/RemoteLoader";
-import { HomePage } from "../pages/HomePage";
-import { NotFoundPage } from "../pages/NotFoundPage";
+import { RemoteLoader } from "~/components/RemoteLoader";
+import { HomePage } from "~/pages/HomePage";
+import { NotFoundPage } from "~/pages/NotFoundPage";
 
 // ---------------------------------------------------------------------------
 // Shell routes
@@ -35,7 +35,7 @@ export const routes: RouteObject[] = [
     path: "/remote-app/*",
     element: (
       <RemoteLoader
-        //@ts-ignore
+        //@ts-expect-error Suppress: Cannot find module 'remoteApp/App' or its corresponding type declarations.
         loader={() => import("remoteApp/App")}
         componentProps={{ basePath: "/remote-app" }}
       />
